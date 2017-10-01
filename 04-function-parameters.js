@@ -30,5 +30,7 @@ console.log(`call function with rest parameters: ${increase(5)} `);
 // spread parameters
 list1 = [1,2,3,4,5]
 list2 = [12, 13, 14]
-
 console.log(`spread parameters: ${[...list1, 6,7,8,9,10,11,...list2,15,16,17,18]}`)
+
+let [first, second, ...rest] = list1;
+console.log(`example of destructing  ${first}  ${second}   ${rest}`);
