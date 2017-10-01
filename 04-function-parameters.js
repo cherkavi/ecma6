@@ -2,6 +2,7 @@
 function summarize (x, y, z = 5) {
     // console.log('x=%s  y=%s  z=%s', x, y, z)
     console.log(`---\n input arguments <${arguments.length}>: ${arguments[0]}, ${arguments[1]}, ${arguments[2]} `);
+    // print of owner of the object
     console.log(this.toString())
     // example of previous solutions
     if(y===undefined){
@@ -15,16 +16,14 @@ console.log(`example with partial list of parameters: ${summarize(8,9)}`)
 console.log(`example with partial list of parameters: ${summarize(4)} `)
 
 let contextObject = {name: "Tesla", location: "USA", toString: function(){return `[${this.name} ${this.location}]`}};
-console.log(`execute function with context object ${summarize.call(contextObject,1, 2, 3)}`);
+console.log(`call function with context object ${summarize.call(contextObject,1, 2, 3)}`);
 
 
 // rest parameter
 function increase (increaseValue, ... restList) {
     return restList.map(each => each + increaseValue)
 }
-
 console.log(`call function with rest parameter: ${increase(5, 1,2,3,4,5)} `);
-console.log(`call function with rest parameters: ${increase(5)} `);
 
 
 // spread parameters
