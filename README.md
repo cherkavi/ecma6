@@ -1,2 +1,4 @@
-# ecma6
-test area for ECMA6 features, list of all features can be found: http://es6-features.org
+### ECMA6
+- [features](http://es6-features.org)
+- [Let's Learn ES6](youtube.com) 
+- [practice](es6katas.org)
