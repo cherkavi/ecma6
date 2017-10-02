@@ -1,7 +1,7 @@
-var a = 10, b = 20, c = 30, d = 40;
+var w = 10, x = 20, y = 30, z = 40;
 
-[a, b] = [d, c];
-console.log("array matching: a = %s,  b = %s", a, b);
+[x, y] = [w, z];
+console.log("array matching: x = %s,  y = %s", x, y);
 
 var list = [1, 2, 3]
 var [a, b, c = 3, d] = list;
