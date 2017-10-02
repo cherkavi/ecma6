@@ -5,7 +5,7 @@ function Person(firstArgument, secondArgument){
     this.toString = () => {
         return `${this.name}  ${this.surname}`;
     }
-};
+}
 
 let jack = new Person("Jack", "Riper");
 console.log(`explicit object creation from function : [${jack.name}]   [${jack.surname}]   ${jack.toString()}`);
@@ -24,9 +24,9 @@ let sharlize = new Object();
 sharlize.name = "Sharlize";
 sharlize.surname = "Theron";
 sharlize.toString = ()=>`${this.name}  ${this.surname}`;
-console.log(`object with arrow function is not working : ${sharlize}`)
+console.log(`object with arrow function is not working : ${sharlize}`);
 
-let sourceObject = {model: "2104", color: "green"}
+let sourceObject = {model: "2104", color: "green"};
 let {model: modelFromSource, color: colorFromSource} = sourceObject;
 console.log(`destructuring the object:  ${modelFromSource}  ${colorFromSource} `);
 let {model:modelSource, color:colorSource} = sourceObject;
@@ -45,3 +45,6 @@ new Array(); // []
 new RegExp(); //
 new Function(); // function()/()=>
 new Date(); //
+
+[jack, john] = [john, jack];
+console.log(` after switch,  jack: ${jack}    john: ${john}`);
