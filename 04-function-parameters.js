@@ -19,14 +19,12 @@ let contextObject = {name: "Tesla", location: "USA", toString: function(){return
 console.log(`call function with context object ${summarize.call(contextObject,1, 2, 3)}`);
 
 
-// rest parameter
-function increase (increaseValue, ... restList) {
-    return restList.map(each => each + increaseValue)
+function increase (increaseValue, ... restParameters) {
+    return restParameters.map(each => each + increaseValue)
 }
 console.log(`call function with rest parameter: ${increase(5, 1,2,3,4,5)} `);
 
 
-// spread parameters
 list1 = [1,2,3,4,5]
 list2 = [12, 13, 14]
 console.log(`spread parameters: ${[...list1, 6,7,8,9,10,11,...list2,15,16,17,18]}`)
@@ -38,3 +36,7 @@ for(let index=0;index<list1.length/2;index++){
    [list1[index],list1[list1.length-index-1]]=[list1[list1.length-index-1],list1[index]];
 }
 console.log(`reversed array: ${list1}`);
+
+(function(value, title = `title for ${value} `, superTitle = `${value} ${title}`){
+    console.log(`computing parameters: ${value},  ${title}, ${superTitle} `);
+})("prodigy");
