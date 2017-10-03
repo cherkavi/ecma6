@@ -57,7 +57,7 @@ console.log(" Shape getter : "+s1.x + "   "+s1.y);
 // setter example
 s1.x = 5;
 console.log(" Shape getter : "+s1.x + "   "+s1.y);
-console.log(" Shape access to 'private' method '_x': "+s1._x);
+console.log(" Shape access to 'private' field '_x': "+s1._x);
 console.log(" Shape execute custom method: " + s1.customMethod());
 // add specific function
 s1["customMethod2"] = function(){
