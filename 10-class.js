@@ -1,14 +1,17 @@
 class Shape{
-
     // constructor
     constructor( x, y ){
+        if(!Shape.index){
+            Shape.index=0;
+        }
+        Shape.index++;
         this._x = x;
         this._y = y;
     }
 
     // static method
     static printPosition(){
-        console.log(` x = ${this._x}   y = ${this._y}`)
+        console.log(` access to static field ${Shape.index}`)
     }
 
     // getter
@@ -87,3 +90,4 @@ obj1._x = 5;
 console.log(" custom object toString method: " + obj1);
 console.log(" custom object custom method: "+obj1.anotherCustomMethod());
 console.log(" custom object field: "+obj1._x);
+Shape.printPosition();
