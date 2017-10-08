@@ -1,6 +1,7 @@
 let strings = ["three", "one","two","four", "four", "four", "four"];
 console.log(`init array: ${strings}`);
 
+// set
 let category = new Set(strings);
 console.log(`list of unique objects: ${JSON.stringify([...category])}`);
 
@@ -22,6 +23,7 @@ score.set("fenics", 3);
 score.set("eagle", 5);
 score.set("falcon", 7);
 console.log(`get owl:${score.get("owl")}  get score of fenics:${score.get("fenics")}   size:${score.size}   has pidgin:${score.has("pidgin")}`)
+
 
 let one = {value:1};
 let anotherOne = {value:1};
