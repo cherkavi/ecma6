@@ -1,17 +1,14 @@
 class Shape{
+
     // constructor
     constructor( x, y ){
-        if(!Shape.index){
-            Shape.index=0;
-        }
-        Shape.index++;
         this._x = x;
         this._y = y;
     }
 
     // static method
-    static printPosition(){
-        console.log(` access to static field ${Shape.index}`)
+    static printPosition(target){
+        return ` x = ${target._x}   y = ${target._y}`;
     }
 
     // getter
@@ -60,7 +57,7 @@ console.log(" Shape getter : "+s1.x + "   "+s1.y);
 // setter example
 s1.x = 5;
 console.log(" Shape getter : "+s1.x + "   "+s1.y);
-console.log(" Shape access to 'private' field '_x': "+s1._x);
+console.log(" Shape access to 'private' method '_x': "+s1._x);
 console.log(" Shape execute custom method: " + s1.customMethod());
 // add specific function
 s1["customMethod2"] = function(){
@@ -86,8 +83,9 @@ obj1["anotherCustomMethod"] = function(){
     return "another custom method";
 }
 obj1._x = 5;
+obj1._y = 8;
 
 console.log(" custom object toString method: " + obj1);
 console.log(" custom object custom method: "+obj1.anotherCustomMethod());
 console.log(" custom object field: "+obj1._x);
-Shape.printPosition();
+console.log(" static method : "+Shape.printPosition(obj1));
